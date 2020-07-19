@@ -1,21 +1,25 @@
 import java.util.ArrayList;
-import java.util.HashMap;
+
 
 
 public class Station {
   public int stationId;
   public String location;
-  public static ArrayList<Bike> availableBikes;
+  public ArrayList<Bike>availableBikes;
 
   public Station(int stationId, String location) {
     this.stationId = stationId;
     this.location = location;
+    this.availableBikes = new ArrayList<>();
   }
 
 
 
-   static void addBike(Bike Bike){
-     availableBikes.add(Bike);
+/*    addBike is used by WienerLinien to distribute bikes to station
+    as well as to initially fill the station and guarantee an even distribution*/
+
+  public void addBike(Bike Bike){
+      availableBikes.add(Bike);
 
   }
 

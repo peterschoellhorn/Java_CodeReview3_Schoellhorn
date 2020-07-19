@@ -1,13 +1,13 @@
 public class Bike {
-  public static int bikeId;
+  public int bikeId;
+  public static int tempBikeId = 0;
   public String color;
   public String state;
 
 
-
   public Bike(String color, String state) {
 
-    ++bikeId;
+    this.bikeId=(++tempBikeId);
     this.color = color;
     this.state = state;
   }
@@ -15,8 +15,8 @@ public class Bike {
   //Get-Set-Methods
 
 
-  public static int getBikeId() {
+  public int getBikeId() {
     return bikeId;
   }
-
 }
+
